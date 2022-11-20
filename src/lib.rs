@@ -60,34 +60,29 @@ impl FnvHashResult {
 
 impl fmt::Display for FnvHashResult {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        // Customize so only `x` and `y` are denoted.
         write!(f, "{}", self.as_hex())
     }
 }
 
 impl fmt::LowerHex for FnvHashResult {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        // Customize so only `x` and `y` are denoted.
         write!(f, "{}", hex::encode(&self.0))
     }
 }
 
 impl fmt::UpperHex for FnvHashResult {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        // Customize so only `x` and `y` are denoted.
         write!(f, "{}", self.as_hex())
     }
 }
 
 impl fmt::Debug for FnvHashResult {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        // Customize so only `x` and `y` are denoted.
         f.debug_tuple("FnvHashResult")
             .field(&self.as_hex())
             .finish()
     }
 }
-
 
 
 /// A builder for default FNV hashers.
