@@ -24,14 +24,14 @@ impl FnvHasher for FnvHasher32 {
 
     #[inline]
     fn update(&mut self, bytes: &[u8]) {
-        let FnvHasher32(mut hash) = *self;
+        let mut hash = self.0;
 
         for byte in bytes.into_iter() {
             hash = hash ^ (*byte as u32);
             hash = hash.wrapping_mul(consts::FNV_PRIME_32);
         }
 
-        *self = FnvHasher32(hash);
+        self.0 = hash;
     }
 
     #[inline]
