@@ -17,7 +17,7 @@ categories = ["algorithms", "cryptography"]
 [dependencies]
 crypto-bigint = "0.4.9"
 hex = "0.4.3"
-
+paste = "1.0"
 
 #[lib]
 #name = "fnv_rs"

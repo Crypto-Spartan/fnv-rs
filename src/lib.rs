@@ -6,18 +6,14 @@ use core::hash::{Hasher, BuildHasherDefault};
 use std::collections::{HashMap, HashSet};
 //use core::default::Default;
 //use core::hash::{Hasher, BuildHasherDefault};
-use crypto_bigint::{UInt};
+use crypto_bigint::{UInt, U256, U512, U1024};
+use paste::paste;
 
 mod consts;
-mod algos;
+mod macros;
 
-pub use crate::algos::Fnv32::FnvHasher32 as Fnv32;
-pub use crate::algos::Fnv64::FnvHasher64 as Fnv64;
-pub use crate::algos::Fnv128::FnvHasher128 as Fnv128;
-pub use crate::algos::Fnv256::FnvHasher256 as Fnv256;
-pub use crate::algos::Fnv512::FnvHasher512 as Fnv512;
-pub use crate::algos::Fnv1024::FnvHasher1024 as Fnv1024;
-
+#[cfg(test)]
+mod tests;
 
 pub trait FnvHasher {
     fn new() -> Self;
@@ -83,6 +79,33 @@ impl fmt::Debug for FnvHashResult {
             .finish()
     }
 }
+
+
+macros::create_fnvhasher!(32);
+macros::create_fnvhasher!(64);
+macros::create_fnvhasher!(128);
+macros::create_fnvhasher_bigint!(256);
+macros::create_fnvhasher_bigint!(512);
+macros::create_fnvhasher_bigint!(1024);
+
+impl Hasher for FnvHasher64 {
+    #[inline]
+    fn write(&mut self, bytes: &[u8]) {
+        self.update(bytes);
+    }
+
+    #[inline]
+    fn finish(&self) -> u64 {
+        self.0
+    }
+}
+
+pub use FnvHasher32 as Fnv32;
+pub use FnvHasher64 as Fnv64;
+pub use FnvHasher128 as Fnv128;
+pub use FnvHasher256 as Fnv256;
+pub use FnvHasher512 as Fnv512;
+pub use FnvHasher1024 as Fnv1024;
 
 
 /// A builder for default FNV hashers.
