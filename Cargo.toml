@@ -26,3 +26,7 @@ paste = "1.0"
 [features]
 default = ["std"]
 std = []
+
+[profile.release]
+lto = true
+codegen-units = 1
