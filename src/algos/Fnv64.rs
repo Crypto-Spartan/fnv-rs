@@ -24,7 +24,6 @@ impl FnvHasher for FnvHasher64 {
 
     #[inline]
     fn update(&mut self, bytes: &[u8]) {
-        //let FnvHasher64(mut hash) = *self;
         let mut hash = self.0;
 
         for byte in bytes.into_iter() {
@@ -32,7 +31,6 @@ impl FnvHasher for FnvHasher64 {
             hash = hash.wrapping_mul(consts::FNV_PRIME_64);
         }
 
-        //*self = FnvHasher64(hash);
         self.0 = hash;
     }
 
@@ -60,6 +58,7 @@ impl Hasher for FnvHasher64 {
         self.0
     }
 }
+
 
 #[cfg(test)]
 mod test {
