@@ -23,7 +23,14 @@ The Rust compiler itself uses FNV, as it is not worried about
 denial-of-service attacks, and can assume that its inputs are going to be
 small—a perfect use case for FNV.
 
-## General Use
+## Examples
+
+If you want to use any of the larger output FNV variants (256, 512, or 1024), make sure you enable the `bigint` feature:
+
+```toml
+[dependencies]
+fnv_rs = { version = "0.4.0", features = ["bigint"] }
+```
 
 ### Hash Method
 
