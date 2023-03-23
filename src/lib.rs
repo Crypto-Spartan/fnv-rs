@@ -1,4 +1,3 @@
-//#![cfg_attr(docsrs, feature(doc_auto_cfg))]
 #![cfg_attr(all(doc, CHANNEL_NIGHTLY), feature(doc_auto_cfg))]
 #![doc = include_str!("../README.md")]
 
@@ -50,15 +49,6 @@ impl Hasher for Fnv64 {
         self.0
     }
 }
-
-/*
-pub use FnvHasher32 as Fnv32;
-pub use FnvHasher64 as Fnv64;
-pub use FnvHasher128 as Fnv128;
-pub use FnvHasher256 as Fnv256;
-pub use FnvHasher512 as Fnv512;
-pub use FnvHasher1024 as Fnv1024;
-*/
 
 /// A builder for default FNV hashers.
 pub type FnvBuildHasher = BuildHasherDefault<Fnv64>;
