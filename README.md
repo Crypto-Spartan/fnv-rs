@@ -2,6 +2,19 @@
 
 An implementation of the [Fowler–Noll–Vo hash function](https://en.wikipedia.org/w/index.php?title=Fowler%E2%80%93Noll%E2%80%93Vo_hash_function) ([FNV-1a](https://datatracker.ietf.org/doc/html/draft-eastlake-fnv)) - including 32, 64, 128, 256, 512, & 1024 bit variants.
 
+[![Crates.io][crates-badge]][crates-url]
+[![License][mit-badge]][mit-url]
+[![License][apache-badge]][apache-url]
+
+[crates-badge]: https://img.shields.io/badge/crates.io-v0.4.0-blue
+[crates-url]: https://crates.io/crates/fnv_rs
+[mit-badge]: https://img.shields.io/badge/license-MIT-blue.svg
+[mit-url]: https://github.com/Crypto-Spartan/fnv-rs/blob/main/LICENSE-MIT
+[apache-badge]: https://img.shields.io/badge/License-Apache_2.0-blue.svg
+[apache-url]: https://github.com/Crypto-Spartan/fnv-rs/blob/main/LICENSE-APACHE
+
+[API Docs](https://docs.rs/fnv_rs/latest/fnv_rs/)
+
 ## About
 
 The FNV hash function provides a custom `Hasher` implementation that is more
