@@ -29,12 +29,8 @@ pub trait FnvHasher {
 macros::create_fnvhasher!(32);
 macros::create_fnvhasher!(64);
 macros::create_fnvhasher!(128);
-
-#[cfg(feature = "bigint")]
 macros::create_fnvhasher_bigint!(256);
-#[cfg(feature = "bigint")]
 macros::create_fnvhasher_bigint!(512);
-#[cfg(feature = "bigint")]
 macros::create_fnvhasher_bigint!(1024);
 
 
