@@ -1,5 +1,3 @@
-#![allow(dead_code)]
-
 #[cfg(feature = "bigint")]
 use crypto_bigint::{U256, U512, U1024};
 
