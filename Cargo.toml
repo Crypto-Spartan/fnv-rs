@@ -1,6 +1,6 @@
 [package]
 name = "fnv_rs"
-version = "0.4.1"
+version = "0.4.2"
 authors = ["Crypto-Spartan <accounts@cryptospartan.net>"]
 edition = "2021"
 rust-version = "1.68"
@@ -10,7 +10,7 @@ repository = "https://github.com/CryptoSpartan/fnv-rs"
 license = "Apache-2.0 / MIT"
 keywords = ["hash", "cryptography", "crypto", "algorithm", "library"]
 categories = ["algorithms", "cryptography"]
-homepage = "https://github.com/CryptoSpartan/fnv-rs"
+homepage = "https://github.com/Crypto-Spartan/fnv-rs"
 documentation = "https://docs.rs/fnv-rs"
 build = "build.rs"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
@@ -23,17 +23,9 @@ crypto-bigint = { version = "0.4.9", optional = true }
 [build-dependencies]
 rustc_version = "0.4.0"
 
-#[lib]
-#name = "fnv_rs"
-#path = "src/lib.rs"
-
 [features]
 bigint = ["dep:crypto-bigint"]
 
 [package.metadata.docs.rs]
 all-features = true
 rustdoc-args = ["--cfg", "docsrs"]
-
-[profile.release]
-lto = true
-codegen-units = 1
