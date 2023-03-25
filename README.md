@@ -6,11 +6,11 @@ An implementation of the [Fowler–Noll–Vo hash function](https://en.wikipedia
 [![License][mit-badge]][mit-url]
 [![License][apache-badge]][apache-url]
 
-[crates-badge]: https://img.shields.io/badge/crates.io-v0.4.2-blue
+[crates-badge]: https://img.shields.io/static/v1?label=crates.io&message=v0.4.3&color=success&style=for-the-badge&logo=rust
 [crates-url]: https://crates.io/crates/fnv_rs
-[mit-badge]: https://img.shields.io/badge/license-MIT-blue.svg
+[mit-badge]: https://img.shields.io/static/v1?label=License&message=MIT&color=blue&style=for-the-badge
 [mit-url]: https://github.com/Crypto-Spartan/fnv-rs/blob/main/LICENSE-MIT
-[apache-badge]: https://img.shields.io/badge/License-Apache_2.0-blue.svg
+[apache-badge]: https://img.shields.io/static/v1?label=License&message=Apache_2.0&color=blue&style=for-the-badge
 [apache-url]: https://github.com/Crypto-Spartan/fnv-rs/blob/main/LICENSE-APACHE
 
 [API Docs](https://docs.rs/fnv_rs/latest/fnv_rs/)
