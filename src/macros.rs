@@ -102,6 +102,12 @@ macro_rules! create_fnvhasher {
                 FnvHashResult::[<from_u $x>](hash)
             }
         }
+
+        impl From<[<Fnv $x>]> for [<u $x>] {
+            fn from(value: [<Fnv $x>]) -> Self {
+                value.0
+            }
+        }
     }}
 }
 
