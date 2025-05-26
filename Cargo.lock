@@ -27,7 +27,7 @@ dependencies = [
 
 [[package]]
 name = "fnv_rs"
-version = "0.4.8"
+version = "0.4.9"
 dependencies = [
  "crypto-bigint",
  "hex",

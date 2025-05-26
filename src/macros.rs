@@ -113,8 +113,6 @@ macro_rules! create_fnvhasher {
 
 macro_rules! create_fnvhasher_bigint {
     ($x:literal) => { paste! {
-        #[cfg(feature = "bigint")]
-        use crypto_bigint::{UInt, [<U $x>]};
 
         #[doc = "A FNV-1a hasher that produces a " $x "-bit output."]
         ///
