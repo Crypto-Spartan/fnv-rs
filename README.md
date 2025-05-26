@@ -6,7 +6,7 @@ An implementation of the [Fowler–Noll–Vo hash function](https://en.wikipedia
 [![License][mit-badge]][mit-url]
 [![License][apache-badge]][apache-url]
 
-[crates-badge]: https://img.shields.io/static/v1?label=crates.io&message=v0.4.7&color=success&style=for-the-badge&logo=rust
+[crates-badge]: https://img.shields.io/static/v1?label=crates.io&message=v0.4.8&color=success&style=for-the-badge&logo=rust
 [crates-url]: https://crates.io/crates/fnv_rs
 [mit-badge]: https://img.shields.io/static/v1?label=License&message=MIT&color=blue&style=for-the-badge
 [mit-url]: https://github.com/Crypto-Spartan/fnv-rs/blob/main/LICENSE-MIT

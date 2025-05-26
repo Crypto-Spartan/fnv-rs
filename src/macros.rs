@@ -175,7 +175,7 @@ macro_rules! create_fnvhasher_bigint {
                 let mut hash = self.0;
 
                 for byte in bytes.into_iter() {
-                    hash = hash ^ (UInt::<{$x / 64}>::from(*byte));
+                    hash = hash ^ (UInt::from_u8(*byte));
                     hash = hash.wrapping_mul(&consts::[<FNV_PRIME_ $x>]);
                 }
 
@@ -213,7 +213,7 @@ macro_rules! create_fnvhasher_bigint {
                 let mut hash = consts::[<FNV_OFFSET_ $x>];
 
                 for byte in bytes.as_ref().into_iter() {
-                    hash = hash ^ (UInt::<{$x / 64}>::from(*byte));
+                    hash = hash ^ (UInt::from_u8(*byte));
                     hash = hash.wrapping_mul(&consts::[<FNV_PRIME_ $x>]);
                 }
 
