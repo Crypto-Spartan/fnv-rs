@@ -1,6 +1,3 @@
-use paste::paste;
-use crate::{consts, FnvHasher, FnvHashResult};
-
 macro_rules! create_fnvhasher {
     ($x:literal) => { paste! {
 
