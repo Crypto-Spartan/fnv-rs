@@ -1,6 +1,6 @@
 [package]
 name = "fnv_rs"
-version = "0.4.11"
+version = "0.4.12"
 authors = ["Crypto-Spartan <accounts@cryptospartan.net>"]
 edition = "2021"
 rust-version = "1.68"

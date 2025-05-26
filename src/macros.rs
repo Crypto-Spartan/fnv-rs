@@ -111,6 +111,9 @@ macro_rules! create_fnvhasher {
     }}
 }
 
+#[cfg(feature = "bigint")]
+use crypto_bigint::{Uint, U256, U512, U1024};
+
 macro_rules! create_fnvhasher_bigint {
     ($x:literal) => { paste! {
 
