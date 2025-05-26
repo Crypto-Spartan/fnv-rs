@@ -8,17 +8,17 @@ impl FnvHashResult {
     pub(crate) fn from_u32(i: u32) -> Self {
         FnvHashResult(Box::from(i.to_be_bytes()))
     }
-    
+
     pub(crate) fn from_u64(i: u64) -> Self {
         FnvHashResult(Box::from(i.to_be_bytes()))
     }
-    
+
     pub(crate) fn from_u128(i: u128) -> Self {
         FnvHashResult(Box::from(i.to_be_bytes()))
     }
-    
+
     #[cfg(feature = "bigint")]
-    pub(crate) fn from_bigint<T>(bigint: T) -> Self 
+    pub(crate) fn from_bigint<T>(bigint: T) -> Self
     where
         T: crypto_bigint::prelude::Encoding,
     {
