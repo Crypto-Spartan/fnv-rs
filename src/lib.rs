@@ -8,7 +8,7 @@ mod hash_result;
 
 
 #[cfg(feature = "bigint")]
-use crypto_bigint::{UInt, U256, U512, U1024};
+use crypto_bigint::{Uint, U256, U512, U1024};
 
 use paste::paste;
 use std::collections::{HashMap, HashSet};
