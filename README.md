@@ -42,7 +42,7 @@ If you want to use any of the larger output FNV variants (256, 512, or 1024), ma
 
 ```toml
 [dependencies]
-fnv_rs = { version = "0.4.0", features = ["bigint"] }
+fnv_rs = { version = "0.4", features = ["bigint"] }
 ```
 
 ### Hash Method
