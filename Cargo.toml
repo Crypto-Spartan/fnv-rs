@@ -1,6 +1,6 @@
 [package]
 name = "fnv_rs"
-version = "0.4.4"
+version = "0.4.5"
 authors = ["Crypto-Spartan <accounts@cryptospartan.net>"]
 edition = "2021"
 rust-version = "1.68"
@@ -18,7 +18,7 @@ build = "build.rs"
 [dependencies]
 paste = "1.0"
 hex = "0.4.3"
-crypto-bigint = { version = "0.4.9", optional = true }
+crypto-bigint = { version = "0.6.1", optional = true }
 
 [build-dependencies]
 rustc_version = "0.4.0"

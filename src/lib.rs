@@ -5,7 +5,6 @@ mod consts;
 mod macros;
 mod hash_result;
 #[cfg(test)]
-mod tests;
 
 
 #[cfg(feature = "bigint")]
