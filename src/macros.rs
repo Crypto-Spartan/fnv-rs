@@ -1,6 +1,6 @@
 macro_rules! create_fnvhasher {
     ($x:literal) => { paste! {
-        
+
         #[doc = "A FNV-1a hasher that produces a " $x "-bit output."]
         ///
         /// # Examples:
@@ -42,7 +42,7 @@ macro_rules! create_fnvhasher {
 
             #[doc = "Incrementally update the `Fnv" $x "` object."]
             ///
-            /// This method is best used when you need to update the hasher multiple times. 
+            /// This method is best used when you need to update the hasher multiple times.
             /// If you only need to hash a single piece of data, consider using the [`hash`] method instead.
             ///
             #[doc = "[`hash`]: Fnv" $x "::hash"]
@@ -158,7 +158,7 @@ macro_rules! create_fnvhasher_bigint {
 
             #[doc = "Incrementally update the `Fnv" $x "` object."]
             ///
-            /// This method is best used when you need to update the hasher multiple times. 
+            /// This method is best used when you need to update the hasher multiple times.
             /// If you only need to hash a single piece of data, consider using the [`hash`] method instead.
             ///
             #[doc = "[`hash`]: Fnv" $x "::hash"]
